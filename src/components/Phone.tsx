@@ -3,6 +3,37 @@ import { ChevronLeft, ChevronRight, EllipsisVertical } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import avatar from "@/../public/avatar.jpg";
 
+interface Props {
+  text: string;
+  color: string;
+  bg: string;
+  rounded: string;
+}
+
+const Message = (props: Props) => {
+  return (
+    <p
+      className={`text-${props.color} bg-${props.bg} rounded-lg ${props.rounded}`}
+    >
+      {props.text}
+    </p>
+  );
+};
+
+interface VProps {
+  price: number;
+  text: string;
+}
+
+const Price = (props: VProps) => {
+  return (
+    <div className="flex items-center justify-between">
+      <div className="flex items-center justify-start">{props.text}</div>
+      <h1>{props.price}</h1>
+    </div>
+  );
+};
+
 export default function Phone() {
   return (
     <div className="w-[300px] overflow-hidden relative before:absolute before:left-1/2 before:-translate-x-1/2 before:top-0 before:rounded-b-2xl before:bg-white before:w-[60%] before:h-[23px] shadow-2xl z-30 h-[644px] rounded-[44px] bg-light_grayish_violet border-[10px] border-white flex flex-col items-center">
@@ -24,9 +55,16 @@ export default function Phone() {
       </div>
 
       {/**messages */}
-      <div className="flex flex-col gap-5"></div>
+      <div className="flex flex-col overflow-y-scroll gap-5">
+        <Message />
+        <Message />
+        <div></div>
+        <Message />
+        <Message />
 
-      {/*typing*/}
+        <Message />
+      </div>
+
       <div className="bg-white flex items-center justify-between h-[50px] w-[95%] p-2 rounded-3xl">
         <input
           type="text"
