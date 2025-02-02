@@ -16,8 +16,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/adel-bouras/front_chat_app_on_mobile)
-- Live Site URL: [Add live site URL here](https://front-chat-app-on-mobile.vercel.app/)
+- Solution URL: [solution](https://github.com/adel-bouras/front_chat_app_on_mobile)
+- Live Site URL: [github project](https://front-chat-app-on-mobile.vercel.app/)
 
 ## My process
 
